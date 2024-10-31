@@ -5,10 +5,11 @@ const Navbar = () => {
         <div>
             <h1>Navber</h1>
             <nav className="flex gap-5 ">
-                <a className="hover:text-orange-400" href="/home">Home</a>
-                <a className="hover:text-orange-400" href="/about">About Us</a>
-                <a className="hover:text-orange-400" href="/contact">Contact</a>
-                <Link to='footer'>Footer</Link>
+                <Link to='/home'>Home</Link>
+                <Link to='/about'>About Us</Link>
+                <Link to='/contact'>Contact</Link>
+                <Link to='/footer'>Footer</Link>
+                <Link to='/users'>Users</Link>
             </nav>
 
             <Outlet></Outlet>

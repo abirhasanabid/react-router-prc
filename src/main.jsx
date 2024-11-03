@@ -13,6 +13,7 @@ import Contact from './Components/Contact/Contact';
 import Footer from './Components/Footer/Footer';
 import Users from './Components/Users/Users';
 import Posts from './Components/Posts/Posts';
+import Albums from './Components/Albums/Albums';
 
 
 const router = createBrowserRouter([
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
         path: '/posts',
         loader: () => fetch('https://jsonplaceholder.typicode.com/posts'),
         element: <Posts></Posts>
+      },
+      {
+        path: '/albums',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/albums'),
+        element: <Albums></Albums>
       }
     ]
   },

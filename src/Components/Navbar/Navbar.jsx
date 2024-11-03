@@ -11,6 +11,7 @@ const Navbar = () => {
                 <Link to='/footer'>Footer</Link>
                 <Link to='/users'>Users</Link>
                 <Link to='/posts'>Posts</Link>
+                <Link to='/albums'>Albums</Link>
             </nav>
 
             <Outlet></Outlet>

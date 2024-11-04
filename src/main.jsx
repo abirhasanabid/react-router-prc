@@ -16,6 +16,7 @@ import Posts from './Components/Posts/Posts';
 import Albums from './Components/Albums/Albums';
 import UserDetails from './Components/UserDetails/UserDetails';
 import Comments from './Components/Comments/Comments';
+import Details from './Components/Details/Details';
 
 
 const router = createBrowserRouter([
@@ -64,6 +65,11 @@ const router = createBrowserRouter([
         path: '/comments',
         loader: ()=> fetch('https://jsonplaceholder.typicode.com/comments'),
         element: <Comments></Comments>
+      },
+      {
+        path: '/comment/:commentId',
+        loader : ({params})=> fetch(`https://jsonplaceholder.typicode.com/comments/${params.commentId}`),
+        element: <Details></Details>
       }
 
     ]

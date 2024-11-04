@@ -17,12 +17,14 @@ import Albums from './Components/Albums/Albums';
 import UserDetails from './Components/UserDetails/UserDetails';
 import Comments from './Components/Comments/Comments';
 import Details from './Components/Details/Details';
+import ErrorPage from './Components/Error-page/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Navbar></Navbar>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: 'home',

@@ -14,6 +14,8 @@ import Footer from './Components/Footer/Footer';
 import Users from './Components/Users/Users';
 import Posts from './Components/Posts/Posts';
 import Albums from './Components/Albums/Albums';
+import UserDetails from './Components/UserDetails/UserDetails';
+import Comments from './Components/Comments/Comments';
 
 
 const router = createBrowserRouter([
@@ -42,6 +44,11 @@ const router = createBrowserRouter([
         loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
         element: <Users></Users>
       },
+      {
+        path: '/user/:userId',
+        loader : ({params})=> fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+        element: <UserDetails></UserDetails>
+      },
 
       {
         path: '/posts',
@@ -52,7 +59,13 @@ const router = createBrowserRouter([
         path: '/albums',
         loader: () => fetch('https://jsonplaceholder.typicode.com/albums'),
         element: <Albums></Albums>
+      },
+      {
+        path: '/comments',
+        loader: ()=> fetch('https://jsonplaceholder.typicode.com/comments'),
+        element: <Comments></Comments>
       }
+
     ]
   },
 
